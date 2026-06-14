@@ -4,7 +4,7 @@ import model.Fruit;
 import model.OrderItem;
 import valation.validation;
 
-import java.lang.classfile.CustomAttribute;
+
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -134,17 +134,7 @@ public class FruitManagement {
             }
         }
   }
-    public void displayCart(List<OrderItem> cart){
-        double total = 0;
-        System.out.println("\nProduct | Quantity | Price | Amount");
-        for(OrderItem orderItem : cart){
-            System.out.println(orderItem);
-            total += orderItem.getAmount();
-        }
-        System.out.println("\nTotal : " + total + "$");
 
-
-    }
 
     public void addFruit() {
 
@@ -191,38 +181,7 @@ public class FruitManagement {
 
         displayFruits();
     }
-//    public void shopping(){
-//            if(fruitList.isEmpty()){
-//                System.out.println("Empty");
-//                return;
-//            }
-//            List<OrderItem> cart = new ArrayList<>();
-//            while(true) {
-//                displayFruits();
-//                int item = validation.getInt("Select item", 1, fruitList.size());
-//
-//                Fruit selectedFruit = fruitList.get(item - 1);
-//
-//                System.out.print("\nSelect item: \n"+fruitList.get(item-1).getFruitName());
-//                if (selectedFruit.getQuantity() == 0) {
-//                    System.out.print("\nOut of stock\n");
-//                    continue;
-//                }
-//                int quantity = validation.getInt("\nEnter quantity\n", 1, selectedFruit.getQuantity());
-//                cart.add(new OrderItem(
-//                        selectedFruit.getFruitName(), quantity, selectedFruit.getPrice()
-//                ));
-//                selectedFruit.setQuantity(selectedFruit.getQuantity() - quantity);
-//                System.out.println("\nAdded to cart\n");
-//                boolean orderNow = validation.getYesNo("Do you wwant order now (Y/N)?");
-//                if (orderNow) {
-//                    String customername = validation.getString("Enter customer name: ");
-//                    orders.put(customername, cart);
-//                    System.out.println("\nOrder added successfully!");
-//                    return;
-//                }
-//            }
-//    }
+
     public void viewOrder(){
         if(orders.isEmpty()){
             System.out.println("\nNo orders found!\n");
@@ -242,26 +201,7 @@ public class FruitManagement {
         }
 
     }
-//    public void viewOrder(){
-//        if(orders.isEmpty()){
-//            System.out.println("Empty");
-//            return;
-//        }
-//        for(String customer: orders.keySet()) {
-//            System.out.println("\nCustomer" +
-//                    customer);
-//
-//            System.out.println(
-//                    "Product | Quantity | Price | Amount");
-//            double total = 0;
-//            List<OrderItem> cart = orders.get(customer);
-//            for (OrderItem item : cart) {
-//                System.out.println(item);
-//                total += item.getAmount();
-//            }
-//            System.out.println("Total: " + total + "$");
-//        }
-//    }
+
     public void run() {
         int choice =
                 validation.getInt(
