@@ -207,7 +207,7 @@ public class FruitManagement {
                 validation.getInt(
                         "Enter choice: ",
                         1,
-                        5
+                        4
                 );
 
         switch (choice) {

@@ -20,37 +20,11 @@ public class Menu {
 
             System.out.println(
                     "3. Shopping");
-            System.out.println(
-                    "4. Add Fruit");
-
-
 
             System.out.println(
                     "5. Exit");
 
-//            int choice =
-//                    validation.getInt(
-//                            "Enter choice: ",
-//                            1,
-//                            4
-//                    );
-//
-//            switch (choice) {
-//
-//                case 1:
-//                    fruitManagement.createFruit();
-//                    break;
-//
-//                case 2:
-//                    fruitManagement.viewOrder();
-//                    break;
-//
-//                case 3:
-//                    fruitManagement.shopping();
-//                    break;
-//
-//                case 4:
-//                    System.exit(0);
+
             fruitManagement.run();
             }
         }
